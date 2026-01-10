@@ -250,8 +250,31 @@ footer p {
         gap: 20px;
     }
     
-    .movements-grid {
+    .camera-movements-list {
         max-height: 40vh;
+        overflow: hidden;
+    }
+    
+    .movements-grid {
+        max-height: calc(40vh - 80px); /* 减去标题和内边距的高度 */
+    }
+    
+    .video-preview {
+        max-height: 50vh;
+        overflow-y: auto;
+    }
+    
+    .preview-container video {
+        max-height: 30vh;
+        object-fit: contain;
+    }
+    
+    .prompt-section {
+        margin-top: 15px;
+    }
+    
+    .prompt-container textarea {
+        max-height: 100px;
     }
 }
 
@@ -262,15 +285,55 @@ footer p {
     
     .container {
         padding: 10px;
+        gap: 15px;
     }
     
     .camera-movements-list,
     .video-preview {
         padding: 15px;
+        margin: 0;
+    }
+    
+    .camera-movements-list h2,
+    .video-preview h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
     }
     
     .movements-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
         gap: 8px;
+        max-height: calc(35vh - 70px); /* 进一步减小高度以适应小屏幕 */
+    }
+    
+    .camera-movements-list {
+        max-height: 35vh;
+    }
+    
+    .video-preview {
+        max-height: 55vh;
+    }
+    
+    .preview-container video {
+        max-height: 25vh;
+    }
+    
+    .movement-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .movement-info p {
+        font-size: 0.9rem;
+    }
+    
+    .prompt-container textarea {
+        max-height: 80px;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    
+    .copy-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
     }
 }
