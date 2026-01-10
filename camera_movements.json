@@ -1,18 +1,18 @@
 [
   {
-    "文件名": "https://shaoweixi9.github.io/camera-motion/shots/01.mp4",
+    "文件名": "01.mp4",
     "中文名称": "慢速前推",
     "英文名称": "Slow Dolly In",
     "提示词": "Slow dolly in, camera moves slowly forward toward the subject."
   },
   {
-    "文件名": "https://shaoweixi9.github.io/camera-motion/shots/02.mp4",
+    "文件名": "02.mp4",
     "中文名称": "慢速后拉",
     "英文名称": "Slow Dolly Out",
     "提示词": "Slow dolly out, camera moves slowly backwards away from the subject."
   },
   {
-    "文件名": "https://shaoweixi9.github.io/camera-motion/shots/03.mp4",
+    "文件名": "03.mp4",
     "中文名称": "快速前推",
     "英文名称": "Fast Dolly In",
     "提示词": "Fast dolly in, camera moves rapidly forward toward the subject's face, urgent motion."
