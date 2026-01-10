@@ -1,0 +1,2 @@
+# 追踪所有mp4视频文件（适合你的运镜素材）
+*.mp4 filter=lfs diff=lfs merge=lfs -text

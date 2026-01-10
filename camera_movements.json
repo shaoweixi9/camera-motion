@@ -1,0 +1,254 @@
+[
+  {
+    "文件名": "01.mp4",
+    "中文名称": "慢速前推",
+    "英文名称": "Slow Dolly In",
+    "提示词": "Slow dolly in, camera moves slowly forward toward the subject."
+  },
+  {
+    "文件名": "02.mp4",
+    "中文名称": "慢速后拉",
+    "英文名称": "Slow Dolly Out",
+    "提示词": "Slow dolly out, camera moves slowly backwards away from the subject."
+  },
+  {
+    "文件名": "03.mp4",
+    "中文名称": "快速前推",
+    "英文名称": "Fast Dolly In",
+    "提示词": "Fast dolly in, camera moves rapidly forward toward the subject's face, urgent motion."
+  },
+  {
+    "文件名": "04.mp4",
+    "中文名称": "希区柯克变焦",
+    "英文名称": "Vertigo Effect (Zolly)",
+    "提示词": "Vertigo effect, dolly zoom, camera moves backward while zooming in, background expands."
+  },
+  {
+    "文件名": "05.mp4",
+    "中文名称": "极致微距变焦",
+    "英文名称": "Extreme Macro Zoom",
+    "提示词": "Extreme macro zoom, zoom transition from face to micro view of the eye."
+  },
+  {
+    "文件名": "06.mp4",
+    "中文名称": "穿梭宇宙变焦",
+    "英文名称": "Cosmic Hyper Zoom",
+    "提示词": "Cosmic hyper zoom, fast zoom transition from space down to street level."
+  },
+  {
+    "文件名": "07.mp4",
+    "中文名称": "过肩镜头",
+    "英文名称": "Over the Shoulder (OTS) Shot",
+    "提示词": "Over the shoulder shot, camera mounted behind subject A framing subject B."
+  },
+  {
+    "文件名": "08.mp4",
+    "中文名称": "鱼眼或猫眼镜头",
+    "英文名称": "Fisheye or Peephole Lens",
+    "提示词": "Fisheye lens, extreme wide-angle distortion, circular frame."
+  },
+  {
+    "文件名": "09.mp4",
+    "中文名称": "遮蔽物后揭示镜头",
+    "英文名称": "Reveal from Behind (Wipe Movement)",
+    "提示词": "Wipe movement, camera slides laterally from behind the pillar to reveal the street."
+  },
+  {
+    "文件名": "10.mp4",
+    "中文名称": "孔洞穿越镜头",
+    "英文名称": "Through Shot (Fly Through Aperture)",
+    "提示词": "Fly through, camera moves through the window opening into the room."
+  },
+  {
+    "文件名": "11.mp4",
+    "中文名称": "焦点变化从虚焦变清晰",
+    "英文名称": "Reveal from Blur (Fade In)",
+    "提示词": "Rack focus, start completely out of focus, slowly pull focus until sharp."
+  },
+  {
+    "文件名": "12.mp4",
+    "中文名称": "焦点从前景转到后景",
+    "英文名称": "Rack Focus (Foreground to Background)",
+    "提示词": "Rack focus, focus shifts from the coffee cup to the couple in the background."
+  },
+  {
+    "文件名": "13.mp4",
+    "中文名称": "上摇镜头",
+    "英文名称": "Tilt Up",
+    "提示词": "Tilt up, camera pans vertically up from legs to head."
+  },
+  {
+    "文件名": "14.mp4",
+    "中文名称": "下摇镜头",
+    "英文名称": "Tilt Down",
+    "提示词": "Tilt down, camera pans vertically down from head to feet."
+  },
+  {
+    "文件名": "15.mp4",
+    "中文名称": "摄像机横向左移",
+    "英文名称": "Camera Truck Left",
+    "提示词": "Truck left, camera moves sideways on a track to the left."
+  },
+  {
+    "文件名": "16.mp4",
+    "中文名称": "摄像机横向右移",
+    "英文名称": "Lateral Truck Right",
+    "提示词": "Truck right, camera moves sideways on a track to the right."
+  },
+  {
+    "文件名": "17.mp4",
+    "中文名称": "摄像机 180 度环绕",
+    "英文名称": "Orbit 180",
+    "提示词": "Orbit 180, camera moves in a half-circle around the subject."
+  },
+  {
+    "文件名": "18.mp4",
+    "中文名称": "快速 360 度环绕",
+    "英文名称": "Fast 360 Orbit (The Spin)",
+    "提示词": "Fast 360 orbit, camera spins rapidly 360 degrees around the subject."
+  },
+  {
+    "文件名": "19.mp4",
+    "中文名称": "缓慢电影感弧线运动",
+    "英文名称": "Slow Cinematic Arc",
+    "提示词": "Slow cinematic arc, camera moves in a wide curve to reveal side profile."
+  },
+  {
+    "文件名": "20.mp4",
+    "中文名称": "下降拍摄",
+    "英文名称": "Pedestal Down",
+    "提示词": "Pedestal down, camera lowers vertically straight down."
+  },
+  {
+    "文件名": "21.mp4",
+    "中文名称": "升起拍摄",
+    "英文名称": "Pedestal Up",
+    "提示词": "Pedestal up, camera rises vertically straight up from waist to eye level."
+  },
+  {
+    "文件名": "22.mp4",
+    "中文名称": "摇臂升起 高角度揭示镜头",
+    "英文名称": "Crane Up (High Angle Reveal)",
+    "提示词": "Crane up, camera lifts high into the air."
+  },
+  {
+    "文件名": "23.mp4",
+    "中文名称": "摇臂下降 落地镜头",
+    "英文名称": "Crane Down (Landing)",
+    "提示词": "Crane down, camera descends slowly to the subject."
+  },
+  {
+    "文件名": "24.mp4",
+    "中文名称": "平滑光学推进",
+    "英文名称": "Smooth Optical Zoom In",
+    "提示词": "Smooth optical zoom in, lens magnifies subject, camera stays stationary."
+  },
+  {
+    "文件名": "25.mp4",
+    "中文名称": "平滑光学拉远",
+    "英文名称": "Smooth Optical Zoom Out",
+    "提示词": "Smooth optical zoom out, lens widens, background becomes blurry."
+  },
+  {
+    "文件名": "26.mp4",
+    "中文名称": "快速变焦镜头",
+    "英文名称": "Snap Zoom (Crash Zoom)",
+    "提示词": "Snap zoom, crash zoom, rapid zoom directly into the eyes."
+  },
+  {
+    "文件名": "27.mp4",
+    "中文名称": "无人机航拍 BBC 风格",
+    "英文名称": "Drone Fly Over",
+    "提示词": "Drone fly over, high altitude flight moving forward over the landscape."
+  },
+  {
+    "文件名": "28.mp4",
+    "中文名称": "史诗级无人机揭示镜头",
+    "英文名称": "Epic Drone Reveal",
+    "提示词": "Epic drone reveal, rising and tilting down to reveal the scene."
+  },
+  {
+    "文件名": "29.mp4",
+    "中文名称": "大范围无人机环绕",
+    "英文名称": "Large Scale Drone Orbit",
+    "提示词": "Large scale drone orbit, massive sweeping circle around the island."
+  },
+  {
+    "文件名": "30.mp4",
+    "中文名称": "垂直俯拍上帝视角",
+    "英文名称": "Top Down (God's Eye View)",
+    "提示词": "Top down shot, camera pointing straight down, slow twist."
+  },
+  {
+    "文件名": "31.mp4",
+    "中文名称": "FPV 穿越机视角",
+    "英文名称": "FPV Drone Aggressive (Drone Dive)",
+    "提示词": "FPV drone dive, aggressive diving motion down the waterfall."
+  },
+  {
+    "文件名": "32.mp4",
+    "中文名称": "手持纪实风格",
+    "英文名称": "Handheld Documentary Style",
+    "提示词": "Handheld camera, shaky motion, natural movement, documentary style."
+  },
+  {
+    "文件名": "33.mp4",
+    "中文名称": "甩镜头",
+    "英文名称": "Whip Pan",
+    "提示词": "Whip pan, camera whips violently to the side with extreme directional motion blur."
+  },
+  {
+    "文件名": "34.mp4",
+    "中文名称": "倾斜镜头 荷兰角",
+    "英文名称": "Dutch Angle (Roll)",
+    "提示词": "Dutch angle, camera roll, tilted sideways on Z-axis."
+  },
+  {
+    "文件名": "35.mp4",
+    "中文名称": "引领式镜头 后拉跟拍",
+    "英文名称": "Leading Shot (Backward Tracking)",
+    "提示词": "Leading shot, camera moves backward matching the subject's speed."
+  },
+  {
+    "文件名": "36.mp4",
+    "中文名称": "引领式镜头 前推跟拍",
+    "英文名称": "Following Shot (Forward Tracking)",
+    "提示词": "Following shot, camera follows behind the subject matching speed."
+  },
+  {
+    "文件名": "37.mp4",
+    "中文名称": "平行侧跟",
+    "英文名称": "Side Tracking (Parallel)",
+    "提示词": "Side tracking, camera trucks alongside the subject."
+  },
+  {
+    "文件名": "38.mp4",
+    "中文名称": "主观步行",
+    "英文名称": "POV Walk (First Person Walk)",
+    "提示词": "POV walk, first person camera moving forward with bobbing motion."
+  },
+  {
+    "文件名": "39.mp4",
+    "中文名称": "延迟摄影",
+    "英文名称": "Hyperlapse (Moving Time-Lapse)",
+    "提示词": "Hyperlapse, camera moves forward rapidly, time accelerated, fast motion, light trails."
+  },
+  {
+    "文件名": "40.mp4",
+    "中文名称": "子弹时间",
+    "英文名称": "Bullet Time (Frozen Moment)",
+    "提示词": "Bullet time, frozen moment, ultra slow motion, camera orbit right."
+  },
+  {
+    "文件名": "41.mp4",
+    "中文名称": "滚筒镜头",
+    "英文名称": "Barrel Roll (Vortex Inception Shot)",
+    "提示词": "Barrel roll, camera spins 360 degrees clockwise while moving forward, disorienting."
+  },
+  {
+    "文件名": "42.mp4",
+    "中文名称": "贴地视角",
+    "英文名称": "Worm’s Eye Tracking (Ground Level)",
+    "提示词": "Worm's eye view, low angle tracking, camera moves along the ground looking up."
+  }
+]

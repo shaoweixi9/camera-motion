@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运镜方式展示</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>运镜方式展示</h1>
+        <p>点击下方运镜方式查看视频预览和提示词</p>
+    </header>
+
+    <main class="container">
+        <section class="camera-movements-list">
+            <h2>运镜方式列表</h2>
+            <div class="movements-grid" id="movementsGrid">
+                <!-- 运镜方式卡片将通过JavaScript动态生成 -->
+            </div>
+        </section>
+
+        <section class="video-preview">
+            <h2>视频预览</h2>
+            <div class="preview-container">
+                <video id="previewVideo" controls width="100%" height="auto">
+                    您的浏览器不支持HTML5视频
+                </video>
+                <div class="movement-info">
+                    <h3 id="movementTitle">请选择一种运镜方式</h3>
+                    <p id="movementEnglish">English Name</p>
+                </div>
+            </div>
+
+            <div class="prompt-section">
+                <h3>提示词</h3>
+                <div class="prompt-container">
+                    <textarea id="promptText" readonly rows="4"></textarea>
+                    <button id="copyBtn" class="copy-btn">复制提示词</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Topview Film & Technology</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
