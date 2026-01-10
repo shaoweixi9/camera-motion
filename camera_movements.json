@@ -1,10 +1,6 @@
 [
   {
-<<<<<<< HEAD
     "文件名": "01.mp4",
-=======
-    "文件名": "https://res.cloudinary.com/drcq5lsmz/video/upload/v1768056519/01_mclvyq.mp4",
->>>>>>> 0aaa0d7beebf80f1855f0795145be31ee184dacd
     "中文名称": "慢速前推",
     "英文名称": "Slow Dolly In",
     "提示词": "Slow dolly in, camera moves slowly forward toward the subject."
@@ -131,13 +127,13 @@
   },
   {
     "文件名": "22.mp4",
-    "中文名称": "摇臂升起高角度揭示镜头",
+    "中文名称": "摇臂升起 高角度揭示镜头",
     "英文名称": "Crane Up (High Angle Reveal)",
     "提示词": "Crane up, camera lifts high into the air."
   },
   {
     "文件名": "23.mp4",
-    "中文名称": "摇臂下降落地镜头",
+    "中文名称": "摇臂下降 落地镜头",
     "英文名称": "Crane Down (Landing)",
     "提示词": "Crane down, camera descends slowly to the subject."
   },
@@ -161,7 +157,7 @@
   },
   {
     "文件名": "27.mp4",
-    "中文名称": "无人机航拍BBC风格",
+    "中文名称": "无人机航拍 BBC 风格",
     "英文名称": "Drone Fly Over",
     "提示词": "Drone fly over, high altitude flight moving forward over the landscape."
   },
@@ -209,13 +205,13 @@
   },
   {
     "文件名": "35.mp4",
-    "中文名称": "引领式镜头后拉跟拍",
+    "中文名称": "引领式镜头 后拉跟拍",
     "英文名称": "Leading Shot (Backward Tracking)",
     "提示词": "Leading shot, camera moves backward matching the subject's speed."
   },
   {
     "文件名": "36.mp4",
-    "中文名称": "引领式镜头前推跟拍",
+    "中文名称": "引领式镜头 前推跟拍",
     "英文名称": "Following Shot (Forward Tracking)",
     "提示词": "Following shot, camera follows behind the subject matching speed."
   },
