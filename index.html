@@ -31,7 +31,17 @@
         <p>点击下方运镜方式查看视频预览和提示词</p>
     </header>
 
-    <main class="container">
+    <!-- 标签页导航 -->
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="tab1">运镜方式库</button>
+        <button class="tab-btn" data-tab="tab2">故事板生成器</button>
+    </div>
+
+    <!-- 标签页内容 -->
+    <div class="tab-content">
+        <!-- 第一个标签页：运镜方式库 -->
+        <div id="tab1" class="tab-pane active">
+            <main class="container">
         <section class="camera-movements-list">
             <h2>运镜方式列表</h2>
             <div class="movements-grid" id="movementsGrid">
@@ -60,6 +70,281 @@
             </div>
         </section>
     </main>
+        </div>
+
+        <!-- 第二个标签页：故事板生成器 -->
+        <div id="tab2" class="tab-pane">
+            <div class="container storyboard-container">
+                
+                <div class="shots-container">
+                    <div class="shot" id="shot-1">
+                        <div class="shot-header">
+                            <h3>镜头 1</h3>
+                            <div class="duration-input">
+                                <label for="duration-1">请填入镜头时长:</label>
+                                <input type="number" id="duration-1" min="1" max="99" placeholder="" style="width: 70px;">
+                                <span>秒</span>
+                            </div>
+                        </div>
+                        <div class="shot-content">
+                            <div class="short-inputs">
+                                <div class="input-group">
+                                    <label for="shot-type-1">景别:</label>
+                                    <input type="text" id="shot-type-1" placeholder="示例：特写">
+                                </div>
+                                <div class="input-group">
+                                    <label for="movement-1">运动:</label>
+                                    <input type="text" id="movement-1" placeholder="示例：固定镜头">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="content-1">内容:</label>
+                                <textarea id="content-1" placeholder="示例：男子皱了一下眉头" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shot" id="shot-2">
+                        <div class="shot-header">
+                            <h3>镜头 2</h3>
+                            <div class="duration-input">
+                                <label for="duration-2">请填入镜头时长:</label>
+                                <input type="number" id="duration-2" min="1" max="99" placeholder="" style="width: 70px;">
+                                <span>秒</span>
+                            </div>
+                        </div>
+                        <div class="shot-content">
+                            <div class="short-inputs">
+                                <div class="input-group">
+                                    <label for="shot-type-2">景别:</label>
+                                    <input type="text" id="shot-type-2" placeholder="示例：全景">
+                                </div>
+                                <div class="input-group">
+                                    <label for="movement-2">运动:</label>
+                                    <input type="text" id="movement-2" placeholder="示例：急速拉远">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="content-2">内容:</label>
+                                <textarea id="content-2" placeholder="示例：整个城市结冰" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shot" id="shot-3">
+                        <div class="shot-header">
+                            <h3>镜头 3</h3>
+                            <div class="duration-input">
+                                <label for="duration-3">请填入镜头时长:</label>
+                                <input type="number" id="duration-3" min="1" max="99" placeholder="" style="width: 70px;">
+                                <span>秒</span>
+                            </div>
+                        </div>
+                        <div class="shot-content">
+                            <div class="short-inputs">
+                                <div class="input-group">
+                                    <label for="shot-type-3">景别:</label>
+                                    <input type="text" id="shot-type-3" placeholder="示例：中景">
+                                </div>
+                                <div class="input-group">
+                                    <label for="movement-3">运动:</label>
+                                    <input type="text" id="movement-3" placeholder="示例：推镜头">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="content-3">内容:</label>
+                                <textarea id="content-3" placeholder="示例：女子微笑着点头" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shot" id="shot-4">
+                        <div class="shot-header">
+                            <h3>镜头 4</h3>
+                            <div class="duration-input">
+                                <label for="duration-4">请填入镜头时长:</label>
+                                <input type="number" id="duration-4" min="1" max="99" placeholder="" style="width: 70px;">
+                                <span>秒</span>
+                            </div>
+                        </div>
+                        <div class="shot-content">
+                            <div class="short-inputs">
+                                <div class="input-group">
+                                    <label for="shot-type-4">景别:</label>
+                                    <input type="text" id="shot-type-4" placeholder="示例：远景">
+                                </div>
+                                <div class="input-group">
+                                    <label for="movement-4">运动:</label>
+                                    <input type="text" id="movement-4" placeholder="示例：摇镜头">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="content-4">内容:</label>
+                                <textarea id="content-4" placeholder="示例：夕阳下的山脉" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shot" id="shot-5">
+                        <div class="shot-header">
+                            <h3>镜头 5</h3>
+                            <div class="duration-input">
+                                <label for="duration-5">请填入镜头时长:</label>
+                                <input type="number" id="duration-5" min="1" max="99" placeholder="" style="width: 70px;">
+                                <span>秒</span>
+                            </div>
+                        </div>
+                        <div class="shot-content">
+                            <div class="short-inputs">
+                                <div class="input-group">
+                                    <label for="shot-type-5">景别:</label>
+                                    <input type="text" id="shot-type-5" placeholder="示例：特写">
+                                </div>
+                                <div class="input-group">
+                                    <label for="movement-5">运动:</label>
+                                    <input type="text" id="movement-5" placeholder="示例：跟镜头">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="content-5">内容:</label>
+                                <textarea id="content-5" placeholder="示例：手表指针转动" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shot" id="shot-6">
+                        <div class="shot-header">
+                            <h3>镜头 6</h3>
+                            <div class="duration-input">
+                                <label for="duration-6">请填入镜头时长:</label>
+                                <input type="number" id="duration-6" min="1" max="99" placeholder="" style="width: 70px;">
+                                <span>秒</span>
+                            </div>
+                        </div>
+                        <div class="shot-content">
+                            <div class="short-inputs">
+                                <div class="input-group">
+                                    <label for="shot-type-6">景别:</label>
+                                    <input type="text" id="shot-type-6" placeholder="示例：中近景">
+                                </div>
+                                <div class="input-group">
+                                    <label for="movement-6">运动:</label>
+                                    <input type="text" id="movement-6" placeholder="示例：固定镜头">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="content-6">内容:</label>
+                                <textarea id="content-6" placeholder="示例：孩子手中的气球" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shot" id="shot-7">
+                        <div class="shot-header">
+                            <h3>镜头 7</h3>
+                            <div class="duration-input">
+                                <label for="duration-7">请填入镜头时长:</label>
+                                <input type="number" id="duration-7" min="1" max="99" placeholder="" style="width: 70px;">
+                                <span>秒</span>
+                            </div>
+                        </div>
+                        <div class="shot-content">
+                            <div class="short-inputs">
+                                <div class="input-group">
+                                    <label for="shot-type-7">景别:</label>
+                                    <input type="text" id="shot-type-7" placeholder="示例：全景">
+                                </div>
+                                <div class="input-group">
+                                    <label for="movement-7">运动:</label>
+                                    <input type="text" id="movement-7" placeholder="示例：旋转镜头">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="content-7">内容:</label>
+                                <textarea id="content-7" placeholder="示例：舞会现场的人群" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shot" id="shot-8">
+                        <div class="shot-header">
+                            <h3>镜头 8</h3>
+                            <div class="duration-input">
+                                <label for="duration-8">请填入镜头时长:</label>
+                                <input type="number" id="duration-8" min="1" max="99" placeholder="" style="width: 70px;">
+                                <span>秒</span>
+                            </div>
+                        </div>
+                        <div class="shot-content">
+                            <div class="short-inputs">
+                                <div class="input-group">
+                                    <label for="shot-type-8">景别:</label>
+                                    <input type="text" id="shot-type-8" placeholder="示例：特写">
+                                </div>
+                                <div class="input-group">
+                                    <label for="movement-8">运动:</label>
+                                    <input type="text" id="movement-8" placeholder="示例：变焦镜头">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="content-8">内容:</label>
+                                <textarea id="content-8" placeholder="示例：眼睛中闪烁的光芒" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shot" id="shot-9">
+                        <div class="shot-header">
+                            <h3>镜头 9</h3>
+                            <div class="duration-input">
+                                <label for="duration-9">请填入镜头时长:</label>
+                                <input type="number" id="duration-9" min="1" max="99" placeholder="" style="width: 70px;">
+                                <span>秒</span>
+                            </div>
+                        </div>
+                        <div class="shot-content">
+                            <div class="short-inputs">
+                                <div class="input-group">
+                                    <label for="shot-type-9">景别:</label>
+                                    <input type="text" id="shot-type-9" placeholder="示例：远景">
+                                </div>
+                                <div class="input-group">
+                                    <label for="movement-9">运动:</label>
+                                    <input type="text" id="movement-9" placeholder="示例：升镜头">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="content-9">内容:</label>
+                                <textarea id="content-9" placeholder="示例：飞机划过天空" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="options-section">
+                    <h3>制作选项</h3>
+                    <div class="options-group">
+                        <label class="option-item">
+                            <input type="checkbox" id="no-subtitles">
+                            <span>无字幕</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" id="no-music">
+                            <span>无音乐</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" id="no-voiceover">
+                            <span>无配音</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="generate-btn">生成提示词</button>
+                    <button id="copy-btn" disabled>复制提示词</button>
+                    <button id="export-btn">导出故事板</button>
+                    <button id="clear-btn">清空所有</button>
+                </div>
+                
+                <div class="result">
+                    <h2>生成的提示词</h2>
+                    <pre id="prompt-result"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2026 Topview Film & Technology</p>

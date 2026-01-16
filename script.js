@@ -88,7 +88,278 @@ document.addEventListener('DOMContentLoaded', () => {
     if (switchBtn) {
         switchBtn.addEventListener('click', switchCDN);
     }
+    
+    // 初始化标签页功能
+    initTabs();
+    
+    // 初始化故事板生成器功能
+    initStoryboardGenerator();
 });
+
+// 标签页功能初始化
+function initTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    const mainTitle = document.querySelector('header h1');
+    const mainSubtitle = document.querySelector('header p');
+    
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetTab = btn.getAttribute('data-tab');
+            
+            // 移除所有活动状态
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabPanes.forEach(p => p.classList.remove('active'));
+            
+            // 添加当前活动状态
+            btn.classList.add('active');
+            document.getElementById(targetTab).classList.add('active');
+            
+            // 根据标签页更新标题
+            if (targetTab === 'tab1') {
+                mainTitle.textContent = '运镜方式展示';
+                mainSubtitle.textContent = '点击下方运镜方式查看视频预览和提示词';
+            } else if (targetTab === 'tab2') {
+                mainTitle.textContent = '故事板提示词生成器';
+                mainSubtitle.textContent = 'Storyboard Prompt Generator';
+            }
+        });
+    });
+}
+
+// 故事板生成器初始化
+function initStoryboardGenerator() {
+    // 生成提示词按钮事件监听
+    const storyboard_generateBtn = document.getElementById('generate-btn');
+    if (storyboard_generateBtn) {
+        storyboard_generateBtn.addEventListener('click', storyboard_generatePrompt);
+    }
+    
+    // 复制提示词按钮事件监听
+    const storyboard_copyBtn = document.getElementById('copy-btn');
+    if (storyboard_copyBtn) {
+        storyboard_copyBtn.addEventListener('click', storyboard_copyPrompt);
+    }
+    
+    // 导出故事板按钮事件监听
+    const storyboard_exportBtn = document.getElementById('export-btn');
+    if (storyboard_exportBtn) {
+        storyboard_exportBtn.addEventListener('click', storyboard_exportStoryboard);
+    }
+    
+    // 清空所有按钮事件监听
+    const storyboard_clearBtn = document.getElementById('clear-btn');
+    if (storyboard_clearBtn) {
+        storyboard_clearBtn.addEventListener('click', storyboard_clearAll);
+    }
+}
+
+// 故事板生成器 - 导出故事板函数
+function storyboard_exportStoryboard() {
+    const promptText = document.getElementById('prompt-result').textContent;
+    
+    if (!promptText) {
+        alert('请先生成提示词');
+        return;
+    }
+    
+    // 获取当前日期时间
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    
+    const dateTime = `${year}${month}${day}_${hours}${minutes}${seconds}`;
+    const fileName = `Storyboard_${dateTime}.txt`;
+    
+    // 创建Blob对象
+    const blob = new Blob([promptText], { type: 'text/plain;charset=utf-8' });
+    
+    // 创建下载链接
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = fileName;
+    
+    // 触发下载
+    document.body.appendChild(link);
+    link.click();
+    
+    // 清理
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+// 故事板生成器 - 清空所有函数
+function storyboard_clearAll() {
+    // 询问用户是否确认清空
+    if (!confirm('确定要清空所有内容吗？')) {
+        return;
+    }
+    
+    // 清空所有输入框
+    for (let i = 1; i <= 9; i++) {
+        const durationInput = document.getElementById(`duration-${i}`);
+        const shotTypeInput = document.getElementById(`shot-type-${i}`);
+        const movementInput = document.getElementById(`movement-${i}`);
+        const contentInput = document.getElementById(`content-${i}`);
+        
+        if (durationInput) durationInput.value = '';
+        if (shotTypeInput) shotTypeInput.value = '';
+        if (movementInput) movementInput.value = '';
+        if (contentInput) contentInput.value = '';
+    }
+    
+    // 取消所有选项勾选
+    const noSubtitles = document.getElementById('no-subtitles');
+    const noMusic = document.getElementById('no-music');
+    const noVoiceover = document.getElementById('no-voiceover');
+    
+    if (noSubtitles) noSubtitles.checked = false;
+    if (noMusic) noMusic.checked = false;
+    if (noVoiceover) noVoiceover.checked = false;
+    
+    // 清空提示词结果
+    const resultElement = document.getElementById('prompt-result');
+    if (resultElement) resultElement.textContent = '';
+    
+    // 禁用复制按钮
+    const copyBtn = document.getElementById('copy-btn');
+    if (copyBtn) copyBtn.disabled = true;
+}
+
+// 故事板生成器 - 生成提示词函数
+function storyboard_generatePrompt() {
+    let prompt = '';
+    let hasShots = false;
+    
+    // 遍历9个镜头
+    for (let i = 1; i <= 9; i++) {
+        const duration = document.getElementById(`duration-${i}`).value;
+        const shotType = document.getElementById(`shot-type-${i}`).value;
+        const movement = document.getElementById(`movement-${i}`).value;
+        const content = document.getElementById(`content-${i}`).value;
+        
+        // 检查镜头是否有数据（至少有一个字段填写）
+        if (duration || shotType || movement || content) {
+            hasShots = true;
+            
+            // 构建镜头信息
+            prompt += `shot ${i}: \n`;
+            
+            // 添加持续时间（如果有填写）
+            if (duration) {
+                prompt += `duration: ${duration}sec \n`;
+            } else {
+                prompt += `duration: \n`;
+            }
+            
+            // 构建Scene内容
+            let sceneContent = '';
+            
+            if (shotType) {
+                sceneContent += shotType;
+            }
+            
+            if (movement) {
+                if (sceneContent) sceneContent += ',';
+                sceneContent += movement;
+            }
+            
+            if (content) {
+                if (sceneContent) sceneContent += ',';
+                sceneContent += content;
+            }
+            
+            // 转换中文标点为英文标点
+            sceneContent = storyboard_convertToEnglishPunctuation(sceneContent);
+            
+            // 添加Scene行
+            prompt += `Scene: ${sceneContent}. \n\n`;
+        }
+    }
+    
+    // 添加制作选项
+    let options = [];
+    if (document.getElementById('no-subtitles').checked) {
+        options.push('无字幕');
+    }
+    if (document.getElementById('no-music').checked) {
+        options.push('无音乐');
+    }
+    if (document.getElementById('no-voiceover').checked) {
+        options.push('无配音');
+    }
+    
+    if (options.length > 0) {
+        prompt += `确保全程${options.join(',')}.`;
+    }
+    
+    // 移除最后的两个换行符
+    prompt = prompt.trim();
+    
+    // 显示生成的提示词
+    const resultElement = document.getElementById('prompt-result');
+    resultElement.textContent = prompt;
+    
+    // 启用/禁用复制按钮
+    const copyBtn = document.getElementById('copy-btn');
+    copyBtn.disabled = !hasShots;
+}
+
+// 故事板生成器 - 复制提示词函数
+function storyboard_copyPrompt() {
+    const promptText = document.getElementById('prompt-result').textContent;
+    
+    // 创建临时textarea元素
+    const textarea = document.createElement('textarea');
+    textarea.value = promptText;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    
+    // 选择并复制文本
+    textarea.select();
+    document.execCommand('copy');
+    
+    // 移除临时元素
+    document.body.removeChild(textarea);
+    
+    // 显示复制成功提示
+    const copyBtn = document.getElementById('copy-btn');
+    const originalText = copyBtn.textContent;
+    copyBtn.textContent = '已复制！';
+    copyBtn.style.backgroundColor = '#95a5a6';
+    
+    // 恢复按钮状态
+    setTimeout(() => {
+        copyBtn.textContent = originalText;
+        copyBtn.style.backgroundColor = '#2ecc71';
+    }, 2000);
+}
+
+// 故事板生成器 - 转换中文标点为英文标点函数
+function storyboard_convertToEnglishPunctuation(text) {
+    return text
+        .replace(/，/g, ',')      // 中文逗号转英文逗号
+        .replace(/。/g, '.')      // 中文句号转英文句号
+        .replace(/；/g, ';')      // 中文分号转英文分号
+        .replace(/：/g, ':')      // 中文冒号转英文冒号
+        .replace(/？/g, '?')      // 中文问号转英文问号
+        .replace(/！/g, '!')      // 中文感叹号转英文感叹号
+        .replace(/“/g, '"')      // 中文引号转英文引号
+        .replace(/”/g, '"')      // 中文引号转英文引号
+        .replace(/‘/g, "'")      // 中文单引号转英文单引号
+        .replace(/’/g, "'")      // 中文单引号转英文单引号
+        .replace(/（/g, '(')      // 中文左括号转英文左括号
+        .replace(/）/g, ')')      // 中文右括号转英文右括号
+        .replace(/【/g, '[')      // 中文左方括号转英文左方括号
+        .replace(/】/g, ']')      // 中文右方括号转英文右方括号
+        .replace(/《/g, '<')      // 中文左书名号转英文左尖括号
+        .replace(/》/g, '>');     // 中文右书名号转英文右尖括号
+}
 
 // 从JSON文件加载运镜方式数据
 async function loadCameraMovements() {
